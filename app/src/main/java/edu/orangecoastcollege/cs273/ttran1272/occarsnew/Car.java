@@ -12,7 +12,7 @@ public class Car {
     private final double APR_4_YEARS = 0.0419;
     private final double APR_5_YEARS = 0.0416;
     private final double TAX_RATE = 0.85;
-    public final DecimalFormat MONEY = new DecimalFormat("#,##0.00");
+    private final DecimalFormat MONEY = new DecimalFormat("#,##0.00");
 
     private double mDownPayment;
     private int mLoanTerm;
@@ -23,7 +23,6 @@ public class Car {
         setDownPayment(10000);
         setLoanTerm(5);
         setPrice(50000);
-
     }
 
     public double getDownPayment() {
@@ -34,6 +33,11 @@ public class Car {
         if (downPayment >= 0){
             mDownPayment = downPayment;
         }
+    }
+
+    public String getFormatedDownPayment(){
+        return MONEY.format(mDownPayment);
+
     }
 
     public int getLoanTerm() {
@@ -56,10 +60,6 @@ public class Car {
         }
     }
 
-    public String getFormatedDownPayment(){
-        return MONEY.format(mDownPayment);
-
-    }
 
     public String getFormatedPrice(){
         return MONEY.format(mPrice);

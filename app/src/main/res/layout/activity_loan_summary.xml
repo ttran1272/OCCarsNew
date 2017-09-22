@@ -13,7 +13,7 @@
         app:srcCompat="@drawable/oc_cars_logo" />
 
     <TextView
-        android:id="@+id/loanSummaryView"
+        android:id="@+id/loanSummaryTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/steel_blue"
@@ -24,15 +24,27 @@
 
     <TextView
         android:id="@+id/loanSummaryTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/loanSummaryTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/noteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@+id/loanSummaryTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/goDataEntryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-
+        android:text="@string/go_data_entry"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onclick="goToData"/>
 
 </RelativeLayout>
